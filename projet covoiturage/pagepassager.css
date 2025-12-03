@@ -33,5 +33,40 @@ th {
     color: white;
 }
 
+/*Élément déclencheur du tooltip*/
+.tooltip {
+    position: relative;  /*positionner le pop-up par rapport au mot */
+}
+
+/* Le pop-up (tooltip) */
+.tooltip-text {
+    /* Le popup est invisible par défaut */
+    visibility: hidden;   /* Le cache complètement */
+    opacity: 0;           /* Le rend transparent */
+    transition: opacity 0.3s; /* Petite animation fluide à l'apparition */
+
+    /* Positionnement du popup */
+    position: absolute;   /* Permet de le placer librement */
+    bottom: 120%;         /* Place le popup AU-DESSUS du mot (plus haut que 100%) */
+    left: 50%;            /* Centre horizontalement par rapport au mot */
+    transform: translateX(-50%); /* Décale pour un centrage parfait */
+
+    /* Apparence du popup */
+    background-color: #2d2e3f;  /* Fond sombre */
+    color: #fff;             /* Texte blanc */
+    padding: 6px 10px;       /* Espacement intérieur */
+    border-radius: 4px;      /* Bords arrondis */
+    white-space: nowrap;     /* Le texte reste sur une seule ligne */
+
+    z-index: 10;             /* S'assure qu'il passe au-dessus des autres éléments */
+}
+
+/* Quand la souris survole le mot */
+.tooltip:hover .tooltip-text {
+    visibility: visible;   /* Rend le popup visible */
+    opacity: 1;            /* Le rend complètement opaque */
+}
+
+
 
 
