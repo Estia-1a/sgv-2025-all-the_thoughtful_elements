@@ -1,0 +1,37 @@
+body {
+    font-family: Arial ; /* style de police de la page*/
+    margin: 0;
+    padding: 20px; /* espace autour de mon tableau*/
+    background-color: #fdfdfd;
+    background-image: url("voiture\ fond.jpg");
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #0b2d60; 
+} 
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Style des cellules (th = en-tête (table header), td = contenu (table data) */
+th, td {  
+    padding: 15px;  /* Espacement interne */
+    text-align: left;
+    border-bottom: 1px solid #ddd;  /* ligne grise en dessous de chaque rangée */
+} 
+
+/* Style des titres de colonnes */
+th {
+    background-color: #0b2d60;
+    color: white;
+}
+
+
+
