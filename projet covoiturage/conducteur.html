@@ -3,28 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Je suis conducteur</title>
+    <title>ESTIA Covoit' - Proposer un trajet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="conducteur.css">
 </head>
 <body>
 
     <header>
-        <nav class="navbar">
-            
-            <div class="logo">
-                <a href="">MonLogo</a>
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#proposer">Proposer un trajet</a></li>
-                <li><a href="#fiche">Fiche info</a></li>
-                <li><a href="#temps-reel">Consulter les trajets en temps réel</a></li>
-            </ul>
-
+        <div class="logo">
+            <span class="estia">ESTIA</span> <span class="covoit">COVOIT'</span>
+        </div>
+        <nav>
+            <a href="#">Conducteur</a>
+            <a href="#">Passager</a>
         </nav>
     </header>
 
-    <h1>Espace Conducteur</h1>
+    <main>
+        <div class="hero-section">
+            <div class="icon-circle">
+                <i class="fa-solid fa-car-side"></i>
+            </div>
+            <h1>Proposer un trajet</h1>
+            <p>Partagez votre trajet vers l'ESTIA Bidart</p>
+        </div>
+
+        <div class="container">
+            
+            <div class="card form-card">
+                <h2>Informations du trajet</h2>
+
+                <form>
+                    <div class="form-group">
+                        <label>Votre nom *</label>
+                        <input type="text" placeholder="Prénom Nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="06 XX XX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Voiture</label>
+                        <input type="text" placeholder="Ex: Renault Clio grise">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lieu de départ *</label>
+                        <input type="text" placeholder="Ville ou adresse de départ">
+                    </div>
+
+                    <div class="tags">
+                        <span class="tag">Bayonne Centre</span>
+                        <span class="tag">Anglet</span>
+                        <span class="tag">Biarritz</span>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card info-card">
+                <h2>Trajets populaires</h2>
+
+                <div class="destination-box">
+                    <div class="destination-content">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <h3>Destination : ESTIA Bidart</h3>
+                        <p>Technopole Izarbel<br>64210 Bidart</p>
+                    </div>
+                </div>
+
+                <div class="frequent-departures">
+                    <p class="section-title">Villes de départ fréquentes :</p>
+                    <div class="departure-item">
+                        <div class="dep-left">
+                            <i class="fa-solid fa-location-dot icon-blue"></i>
+                            <span>Bayonne Centre</span>
+                        </div>
+                        <span class="arrow">→ ESTIA</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
 
 </body>
 </html>

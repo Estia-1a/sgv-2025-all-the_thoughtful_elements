@@ -1,10 +1,232 @@
-h1 {
-            text-align: center; 
-            color:#009edf;
-            -webkit-text-stroke: 0.5px black;
+/* Reset et styles de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
 
-nav {
+/* --- Header --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.estia {
+    color: #000; /* Noir/Gris foncé */
+    margin-right: 5px;
+}
+
+.covoit {
+    color: #00a0df; /* Bleu Cyan */
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* --- Hero Section --- */
+.hero-section {
     text-align: center;
+    margin: 40px 0;
+}
+
+.icon-circle {
+    background-color: #00a0df;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.icon-circle i {
+    color: white;
+    font-size: 24px;
+}
+
+.hero-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.hero-section p {
+    color: #666;
+}
+
+/* --- Container Principal --- */
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Pour le mobile */
+}
+
+/* --- Styles des Cartes --- */
+.card {
+    background: white;
+    border: 1px solid #eef0f2;
+    border-radius: 12px;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.card h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #1a1a1a;
+}
+
+/* --- Formulaire --- */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #e1e4e8;
+    background-color: #f8f9fb;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.form-group input::placeholder {
+    color: #8da0b0;
+}
+
+.form-group input:focus {
+    border-color: #00a0df;
+    background-color: white;
+}
+
+/* Tags (Bayonne, Anglet...) */
+.tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.tag {
+    border: 1px solid #e1e4e8;
+    border-radius: 20px;
+    padding: 6px 15px;
+    font-size: 13px;
+    color: #555;
+    cursor: pointer;
+    background: white;
+}
+
+.tag:hover {
+    border-color: #00a0df;
+    color: #00a0df;
+}
+
+/* --- Info Card (Droite) --- */
+.destination-box {
+    background-color: #e3eff6; /* Bleu très pâle */
+    border-radius: 10px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.destination-content i {
+    font-size: 32px;
+    color: #00a0df;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.destination-content h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.destination-content p {
+    font-size: 14px;
+    color: #666;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.departure-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.dep-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-blue {
+    color: #00a0df;
+}
+
+.arrow {
+    color: #666;
+    font-size: 12px;
+}
+
+/* --- Responsive Mobile --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    header {
+        padding: 15px 20px;
+    }
 }
