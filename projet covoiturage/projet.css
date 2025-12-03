@@ -1,0 +1,116 @@
+html {
+    /* style */
+    background-color:white;
+}
+
+body {
+    /* style */
+    width: 90%;
+    margin: auto;
+    background-color: white;
+    flex-direction: column;
+}
+
+
+header {
+    /* style */
+    background-color:white;
+    color: white;
+    margin-bottom: 2em;
+}
+
+
+
+h1 {
+    /* style */
+    font-size: 4em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    background-color: white;
+}
+
+
+header img {
+    /* style */
+    width: 4em;
+    height: 4em;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+div{
+    margin-bottom: 40%;
+}
+
+
+/*menu_déroulant*/
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    color: white ; 
+    text-decoration: none;
+}
+
+.menu li {
+    position: relative; /* Nécessaire pour placer le sous-menu */
+    display: block;
+    width: 90%;
+    text-decoration: none;
+}
+
+.bg {
+
+    background-image: url("voiture\ fond.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: repeat;
+
+}
+
+ 
+/* Sous-menu caché par défaut */
+.submenu {
+    list-style: none;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    background:rgb(67, 110, 190) ;
+    padding: 0;
+    margin-bottom: 50%;
+    display: none; /* C’est ce qui rend le menu déroulant */
+}
+.passager{
+    margin: 60%;
+    padding: 10%;
+}
+
+.conducteur{
+    margin:60%;
+    padding: 10%;
+}
+
+/* Afficher le sous-menu au survol */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    display: block;
+    width: 90%;/* padding: 150px 150px*; */
+    color: white;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background:rgb(67, 110, 190);
+}
+
