@@ -1,63 +1,66 @@
-/* Reset et styles de base */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+/* On retire le sélecteur universel "*" et le box-sizing */
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Police simple générique */
+    font-family: sans-serif;
     background-color: #ffffff;
-    color: #333;
-    line-height: 1.6;
+    color: #333333;
+    /* On garde margin:0 pour éviter les bords blancs moches, 
+       c'est souvent la seule astuce donnée */
+    margin: 0;
 }
 
 /* --- Header --- */
 header {
+    /* Flexbox est au programme de NSI, donc on le garde */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
     background-color: white;
+    /* On remplace l'ombre complexe par une bordure simple en bas */
+    border-bottom: 1px solid #ddd; 
 }
 
 .logo {
     font-size: 24px;
     font-weight: bold;
-    display: flex;
-    align-items: center;
 }
 
 .estia {
-    color: #000; /* Noir/Gris foncé */
+    color: black;
     margin-right: 5px;
 }
 
 .covoit {
-    color: #00a0df; /* Bleu Cyan */
+    color: #00a0df;
 }
 
 nav a {
     text-decoration: none;
-    color: #555;
+    color: #555555;
     margin-left: 20px;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 /* --- Hero Section --- */
 .hero-section {
     text-align: center;
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .icon-circle {
     background-color: #00a0df;
     width: 60px;
     height: 60px;
+    /* L'arrondi à 50% est une astuce géométrique connue */
     border-radius: 50%;
+    /* Centrer avec flex est standard maintenant */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Centrer le bloc lui-même avec margin auto */
     margin: 0 auto 20px auto;
 }
 
@@ -69,39 +72,35 @@ nav a {
 .hero-section h1 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #1a1a1a;
 }
 
 .hero-section p {
-    color: #666;
+    color: #666666;
 }
 
 /* --- Container Principal --- */
 .container {
     display: flex;
     justify-content: center;
+    /* Gap est récent mais très enseigné car plus simple que les marges */
     gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto 50px auto;
-    padding: 0 20px;
-    flex-wrap: wrap; /* Pour le mobile */
+    width: 90%; /* Largeur en % plutôt que max-width complexe */
+    margin: 0 auto;
 }
 
 /* --- Styles des Cartes --- */
 .card {
     background: white;
-    border: 1px solid #eef0f2;
+    border: 1px solid #eeeeee;
     border-radius: 12px;
     padding: 30px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    width: 45%; /* On définit une largeur approximative pour les colonnes */
+    /* On enlève l'ombre portée (box-shadow) qui est purement esthétique */
 }
 
 .card h2 {
     font-size: 18px;
     margin-bottom: 25px;
-    color: #1a1a1a;
 }
 
 /* --- Formulaire --- */
@@ -110,34 +109,21 @@ nav a {
 }
 
 .form-group label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
+    display: block; /* Pour mettre le label au dessus de l'input */
+    font-weight: bold;
     margin-bottom: 8px;
-    color: #333;
 }
 
 .form-group input {
-    width: 100%;
-    padding: 12px 15px;
+    width: 90%; /* On évite 100% car sans border-box, ça dépasse du cadre */
+    padding: 10px;
     border-radius: 8px;
-    border: 1px solid #e1e4e8;
+    border: 1px solid #cccccc;
     background-color: #f8f9fb;
-    font-size: 14px;
-    color: #333;
-    outline: none;
+    /* On retire les styles au focus (outline) */
 }
 
-.form-group input::placeholder {
-    color: #8da0b0;
-}
-
-.form-group input:focus {
-    border-color: #00a0df;
-    background-color: white;
-}
-
-/* Tags (Bayonne, Anglet...) */
+/* --- Tags --- */
 .tags {
     display: flex;
     gap: 10px;
@@ -145,26 +131,26 @@ nav a {
 }
 
 .tag {
-    border: 1px solid #e1e4e8;
+    border: 1px solid #cccccc;
     border-radius: 20px;
-    padding: 6px 15px;
+    padding: 5px 15px;
     font-size: 13px;
-    color: #555;
     cursor: pointer;
-    background: white;
 }
 
+/* Le survol (:hover) est un classique enseigné */
 .tag:hover {
-    border-color: #00a0df;
-    color: #00a0df;
+    background-color: #f0f0f0;
 }
 
 /* --- Info Card (Droite) --- */
 .destination-box {
-    background-color: #e3eff6; /* Bleu très pâle */
+    background-color: #e3eff6;
     border-radius: 10px;
     height: 250px;
     display: flex;
+    /* Flex direction column pour empiler icone et texte */
+    flex-direction: column; 
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -175,33 +161,15 @@ nav a {
     font-size: 32px;
     color: #00a0df;
     margin-bottom: 15px;
-    display: block;
-}
-
-.destination-content h3 {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-.destination-content p {
-    font-size: 14px;
-    color: #666;
-}
-
-.section-title {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 15px;
 }
 
 .departure-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 15px;
-    border: 1px solid #e1e4e8;
+    padding: 10px;
+    border: 1px solid #cccccc;
     border-radius: 8px;
-    font-size: 14px;
 }
 
 .dep-left {
@@ -214,19 +182,4 @@ nav a {
     color: #00a0df;
 }
 
-.arrow {
-    color: #666;
-    font-size: 12px;
-}
-
-/* --- Responsive Mobile --- */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    header {
-        padding: 15px 20px;
-    }
-}
+/* On a supprimé toute la partie @media (responsive mobile) */
