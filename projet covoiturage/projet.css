@@ -24,8 +24,8 @@ header {
 h1 {
     /* style */
     font-size: 4em;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    margin-top: 0;
+    margin-bottom: 0;
     background-color: white;
 }
 
@@ -56,10 +56,22 @@ div{
     text-decoration: none;
 }
 
+.menu a {
+    color: black;
+    text-decoration: none;   /* enlève le soulignement */
+    display: block;          /* pour occuper toute la largeur du li */
+    padding: 10px;           /* espace interne pour agrandir le fond */
+    background-color: rgb(67, 110, 190);
+}
+
+.menu a:hover {
+    color: lightblue;              /* couleur du texte au survol */
+}
+
 .menu li {
     position: relative; /* Nécessaire pour placer le sous-menu */
     display: block;
-    width: 90%;
+    width: 100%;
     text-decoration: none;
 }
 
@@ -78,6 +90,7 @@ div{
  
 /* Sous-menu caché par défaut */
 .submenu {
+    line-height:200%;
     list-style: none;
     position: absolute;
     z-index: 999;
@@ -87,15 +100,18 @@ div{
     padding: 0;
     margin-bottom: 50%;
     display: none; /* C’est ce qui rend le menu déroulant */
+    width: 100%;
 }
 .passager{
     margin: 60%;
     padding: 10%;
+    
 }
 
 .conducteur{
     margin:60%;
     padding: 10%;
+    background-color: white;
 }
 
 /* Afficher le sous-menu au survol */
