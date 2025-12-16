@@ -1,0 +1,248 @@
+/* --- RESET ET BASE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9fafb;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- VARIABLES COULEURS --- */
+:root {
+    --primary-cyan: #00bed6; /* Cyan ESTIA */
+    --primary-dark: #1f2937; /* Noir/Bleu foncé */
+    --text-gray: #6b7280;
+    --bg-light: #f3f4f6;
+    --white: #ffffff;
+}
+
+/* --- HEADER --- */
+header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-text span {
+    color: var(--primary-cyan);
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--text-gray);
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-cyan);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 4rem 1rem;
+    background-color: #fcfcfc;
+}
+
+.fake-logo-estia {
+    font-weight: 800;
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+.fake-logo-sub {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 1rem;
+}
+
+.hero h1 span {
+    color: var(--primary-cyan);
+}
+
+.hero p.subtitle {
+    color: var(--text-gray);
+    max-width: 700px;
+    margin: 0 auto 3rem auto;
+    font-size: 1.1rem;
+}
+
+/* --- CARDS SELECTION --- */
+.choice-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    font-size: 1.8rem;
+}
+
+.card-driver .icon-circle {
+    background-color: #e0f7fa;
+    color: var(--primary-cyan);
+}
+
+.card-passenger .icon-circle {
+    background-color: #e5e7eb;
+    color: var(--primary-dark);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+.card p {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+}
+
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-cyan {
+    background-color: var(--primary-cyan);
+    color: white;
+    border: none;
+}
+
+.btn-dark {
+    background-color: var(--primary-dark);
+    color: white;
+    border: none;
+}
+
+/* --- FEATURES SECTION --- */
+.features {
+    padding: 4rem 5%;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.features h2 span {
+    color: var(--primary-cyan);
+}
+
+.features-subtitle {
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.feature-item {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-icon-box {
+    width: 60px;
+    height: 60px;
+    background-color: #e0f2f1; /* Light cyan bg */
+    color: var(--primary-cyan);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-dark);
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* --- STATS SECTION --- */
