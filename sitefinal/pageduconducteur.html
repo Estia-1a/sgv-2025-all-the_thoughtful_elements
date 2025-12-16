@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposer un trajet - ESTIA COVOIT'</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="pageduconducteur.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">
+             <i class="fa-solid fa-layer-group" style="font-size: 0.8em; color: #1f2937;"></i>
+             ESTIA <span>COVOIT'</span>
+        </div>
+        <nav>
+            <a href="index.html">Accueil</a> <a href="#" class="active">Conducteur</a>
+            <a href="#">Passager</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="header-icon-circle">
+            <i class="fa-solid fa-car-side"></i>
+        </div>
+        <h1>Proposer un trajet</h1>
+        <p>Partagez votre trajet vers l'ESTIA Bidart</p>
+    </section>
+
+    <div class="main-container">
+        
+        <div class="form-section">
+            <div class="form-card">
+                <h2>Informations du trajet</h2>
+                
+                <form action="#">
+                    <div class="form-group">
+                        <label>Votre nom *</label>
+                        <input type="text" placeholder="Prénom Nom">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Téléphone</label>
+                        <input type="tel" placeholder="06 XX XX XX XX">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Voiture</label>
+                        <input type="text" placeholder="Ex: Renault Clio grise">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Lieu de départ *</label>
+                        <input type="text" placeholder="Ville ou adresse de départ">
+                        <div class="suggestion-chips">
+                            <span class="chip">Bayonne Centre</span>
+                            <span class="chip">Anglet</span>
+                            <span class="chip">Biarritz</span>
+                            <span class="chip">Saint-Jean-de-Luz</span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label>Date *</label>
+                            <div class="input-icon-wrapper">
+                                <input type="text" placeholder="jj/mm/aaaa">
+                                <i class="fa-regular fa-calendar input-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group half">
+                            <label>Heure *</label>
+                            <div class="input-icon-wrapper">
+                                <input type="text" placeholder="--:--">
+                                <i class="fa-regular fa-clock input-icon"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label>Places disponibles</label>
+                            <select>
+                                <option>1 place</option>
+                                <option>2 places</option>
+                                <option selected>3 places</option>
+                                <option>4 places</option>
+                            </select>
+                        </div>
+                        <div class="form-group half">
+                            <label>Prix / place (€)</label>
+                            <input type="number" placeholder="Ex: 3">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Notes (optionnel)</label>
+                        <textarea rows="3" placeholder="Point de RDV, préférences..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Publier le trajet</button>
+
+                </form>
+            </div>
+        </div>
+
+        <aside class="info-sidebar">
+            <div class="info-card">
+                <h2>Trajets populaires</h2>
+                
+                <div class="map-placeholder">
+                    <div class="map-pin">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <div class="map-text">
+                        <strong>Destination : ESTIA Bidart</strong><br>
+                        Technopole Izarbel<br>
+                        64210 Bidart
+                    </div>
+                </div>
+
+                <h3>Villes de départ fréquentes :</h3>
+                
+                <div class="routes-list">
+                    <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Bayonne Centre</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                    <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Anglet</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                    <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Biarritz</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                    <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Saint-Jean-de-Luz</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                    <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Hendaye</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                     <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Hasparren</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                     <div class="route-item">
+                        <div class="route-city"><i class="fa-solid fa-location-dot"></i> Urrugne</div>
+                        <div class="route-dest">→ ESTIA</div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="footer-logo">ESTIA <span>COVOIT'</span></div>
+        <p class="copyright">© 2024 ESTIA COVOIT' - Tous droits réservés</p>
+    </footer>
+
+</body>
+</html>

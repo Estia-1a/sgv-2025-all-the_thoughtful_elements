@@ -1,0 +1,359 @@
+/* =========================================
+   1. RESET ET BASE (GLOBAL)
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f9fafb; /* Gris très clair de fond global */
+    line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+:root {
+    --primary-cyan: #00bed6;
+    --primary-dark: #1f2937;
+    --text-gray: #6b7280;
+    --border-color: #e5e7eb;
+    --white: #ffffff;
+    --bg-input: #f9fafb;
+}
+
+/* =========================================
+   2. HEADER (COMMUN)
+   ========================================= */
+header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo-text span { color: var(--primary-cyan); }
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--text-gray);
+    font-size: 0.95rem;
+}
+nav a:hover, nav a.active { color: var(--primary-cyan); }
+
+/* =========================================
+   3. STYLES PAGE D'ACCUEIL (Rappel)
+   ========================================= */
+.hero { text-align: center; padding: 4rem 1rem; background-color: #fcfcfc; }
+.fake-logo-estia { font-weight: 800; font-size: 2rem; color: #1f2937; letter-spacing: -1px; }
+.fake-logo-sub { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #6b7280; margin-bottom: 1.5rem; }
+.hero h1 { font-size: 2.5rem; color: var(--primary-dark); margin-bottom: 1rem; }
+.hero h1 span { color: var(--primary-cyan); }
+.hero p.subtitle { color: var(--text-gray); max-width: 700px; margin: 0 auto 3rem auto; }
+
+.choice-container { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.card { background: var(--white); padding: 2.5rem 2rem; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); width: 350px; text-align: center; transition: transform 0.3s ease; }
+.card:hover { transform: translateY(-5px); }
+.icon-circle { width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 1.8rem; }
+.card-driver .icon-circle { background-color: #e0f7fa; color: var(--primary-cyan); }
+.card-passenger .icon-circle { background-color: #e5e7eb; color: var(--primary-dark); }
+.card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-dark); }
+.card p { color: var(--text-gray); margin-bottom: 2rem; font-size: 0.95rem; }
+
+.btn { display: inline-block; width: 100%; padding: 0.8rem 1.5rem; border-radius: 8px; font-weight: 600; cursor: pointer; border: none; }
+.btn-cyan { background-color: var(--primary-cyan); color: white; }
+.btn-dark { background-color: var(--primary-dark); color: white; }
+
+.features { padding: 4rem 5%; background-color: var(--white); text-align: center; }
+.features-grid { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; margin-top: 3rem; }
+.feature-item { max-width: 300px; display: flex; flex-direction: column; align-items: center; }
+.feature-icon-box { width: 60px; height: 60px; background-color: #e0f2f1; color: var(--primary-cyan); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 1rem; }
+.stats { background-color: #f1f5f9; padding: 4rem 5%; display: flex; justify-content: center; gap: 6rem; flex-wrap: wrap; text-align: center; }
+.stat-item h3 { font-size: 2.5rem; color: var(--primary-cyan); margin-bottom: 0.5rem; }
+
+/* =========================================
+   4. NOUVEAUX STYLES : PAGE "PROPOSER"
+   ========================================= */
+
+/* En-tête de page (Icône voiture + Titre) */
+.page-header {
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+}
+
+.header-icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-cyan);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem auto;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: var(--text-gray);
+}
+
+/* Layout Principal (Grid 2 colonnes) */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5% 4rem 5%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap; /* Pour le mobile */
+}
+
+.form-section {
+    flex: 1.5; /* Prend plus de place */
+    min-width: 300px;
+}
+
+.info-sidebar {
+    flex: 1; /* Prend moins de place */
+    min-width: 300px;
+}
+
+/* Style des cartes (Formulaire et Sidebar) */
+.form-card, .info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid #f3f4f6;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: var(--primary-dark);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+/* Elements du Formulaire */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+.form-row .half {
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--bg-input);
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--primary-dark);
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #9ca3af;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--primary-cyan);
+    background-color: var(--white);
+}
+
+/* Chips / Tags sous l'input départ */
+.suggestion-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+}
+
+.chip {
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.chip:hover {
+    border-color: var(--primary-cyan);
+    color: var(--primary-cyan);
+}
+
+/* Icônes dans les inputs (Date/Heure) */
+.input-icon-wrapper {
+    position: relative;
+}
+.input-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-gray);
+    pointer-events: none;
+}
+
+/* Bouton Submit */
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-cyan);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
+}
+
+.btn-submit:hover {
+    background-color: #00acc1;
+}
+
+/* Styles Sidebar (Droite) */
+.map-placeholder {
+    background-color: #e0f7fa; /* Fond bleu clair map */
+    border-radius: 8px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-dark);
+    margin-bottom: 2rem;
+}
+
+.map-pin {
+    font-size: 2rem;
+    color: var(--primary-cyan);
+    margin-bottom: 0.5rem;
+}
+.map-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.info-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    color: var(--primary-dark);
+}
+
+/* Liste des villes fréquentes */
+.routes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.route-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--white);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.route-item:hover {
+    border-color: var(--primary-cyan);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.route-city {
+    font-weight: 500;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.route-city i {
+    color: var(--primary-cyan);
+    font-size: 0.9rem;
+}
+
+.route-dest {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+}
+
+/* =========================================
+   5. FOOTER (COMMUN)
+   ========================================= */
+footer {
+    background-color: #f9fafb;
+    padding: 2rem;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+}
+.footer-logo { font-size: 1.2rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.5rem; }
+.footer-logo span { color: var(--primary-cyan); }
+.copyright { font-size: 0.8rem; color: var(--text-gray); }
+
+/* RESPONSIVE : Mobile */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .form-row .half {
+        width: 100%;
+    }
+}
