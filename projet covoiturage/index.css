@@ -1,17 +1,21 @@
 html {
+    /* style */
     background-color:white;
 }
 
 body {
+    /* style */
+    min-height: 100vh; /* À la place de height: 100% */
+    margin: 0;
     width: 90%;
     margin: auto;
     background-color: white;
     flex-direction: column;
-    display: flex;
 }
 
 
 header {
+    /* style */
     background-color:white;
     color: white;
     margin-bottom: 2em;
@@ -20,16 +24,17 @@ header {
 
 
 h1 {
+    /* style */
     text-align: center;
-    font-size: 3.5em;
-    padding: 40px 0;
-    color: #0b2d60;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 0;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: white;
 }
 
 
 header img {
+    /* style */
     width: 4em;
     height: 4em;
     padding-left: 2em;
@@ -40,37 +45,42 @@ header img {
     margin-bottom: 5%;
 }
 
-
-/*menu déroulant*/
+/*menu_déroulant*/
 .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20%;
+    justify-content: center;
+    width: 100%;
+    gap: 20%;
+    
+    font-size: 200%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    gap: 50px;
-    padding: 20px;
-    list-style: none;
+    background: transparent;
+    color: white ; 
+    text-decoration: none;
 }
 
 .menu a {
-    background-color: #0b2d60;
     color: white;
-    padding: 20px 40px;
-    border-radius: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-decoration: none;   /* enlève le soulignement */
+    display: block;          /* pour occuper toute la largeur du li */
+    padding: 10px;           /* espace interne pour agrandir le fond */
+    background-color: #0b2d60;
 }
 
 .menu a:hover {
-    background-color: #1a4a8d;
-    transform: translateY(-5px);
+    color: lightblue;              /* couleur du texte au survol */
 }
 
 .menu li {
-    position: relative;
+    position: relative; /* Nécessaire pour placer le sous-menu */
     display: block;
-    width: 100%;
+    width: 300px;
     text-decoration: none;
 }
 
@@ -83,23 +93,24 @@ header img {
 
 }
 
- 
 /* Sous-menu caché par défaut */
 .submenu {
-    display: none;
+    line-height:200%;
+    list-style: none;
     position: absolute;
-    background-color: white;
-    min-width: 250px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    border-radius: 0 0 8px 8px;
-    padding: 10px 0;
-    z-index: 1000;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+    background:#0b2d60 ;
+    padding: 0;
+    margin-bottom: 50%;
+    display: none; /* C’est ce qui rend le menu déroulant */
+    width: 100%;
 }
-
 .passager{
     margin: 60%;
     padding: 10%;
-    
+
 }
 
 .conducteur{
@@ -107,19 +118,18 @@ header img {
     padding: 10%;
 }
 
+/* Afficher le sous-menu au survol */
 .dropdown:hover .submenu {
     display: block;
 }
 
 .submenu li a {
-    color: #0b2d60 !important;
-    background-color: white !important;
-    padding: 12px 20px;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9em;
+    display: block;
+    width: 90%;/* padding: 150px 150px*; */
+    color: white;
+    text-decoration: none;
 }
 
 .submenu li a:hover {
-    background-color: #f0f4f8 !important;
-    color: #007bff !important;
+    background:#0b2d60;
 }
