@@ -9,6 +9,7 @@ body {
     margin: auto;
     background-color: white;
     flex-direction: column;
+    display: flex;
 }
 
 
@@ -39,8 +40,8 @@ header img {
     padding-right: 2em;
 }
 
-div{
-    margin-bottom: 40%;
+.block{
+    margin-bottom: 5%;
 }
 
 
