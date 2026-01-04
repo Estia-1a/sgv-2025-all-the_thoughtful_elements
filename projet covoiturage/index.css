@@ -11,6 +11,7 @@ body {
     margin: auto;
     background-color: white;
     flex-direction: column;
+    display: flex;
 }
 
 
@@ -30,6 +31,7 @@ h1 {
     margin-top: 0;
     margin-bottom: 0;
     background-color: white;
+    color:#0b2d60;
 }
 
 
@@ -48,15 +50,11 @@ header img {
 /*menu_déroulant*/
 .menu {
     list-style: none;
-    margin: 0;
     padding: 0;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 20%;
-    justify-content: center;
-    width: 100%;
+    margin-right: 20%;
+    margin-left: 20%;
+    margin-top: 15%;
     gap: 20%;
-    
     font-size: 200%;
     display: flex;
     flex-direction: row;
@@ -67,9 +65,10 @@ header img {
 
 .menu a {
     color: white;
-    text-decoration: none;   /* enlève le soulignement */
-    display: block;          /* pour occuper toute la largeur du li */
-    padding: 10px;           /* espace interne pour agrandir le fond */
+    text-decoration: none;
+    display: block;
+    border-radius: 8px;
+    padding: 10px;
     background-color: #0b2d60;
 }
 
@@ -98,6 +97,7 @@ header img {
     line-height:200%;
     list-style: none;
     position: absolute;
+    border-radius: 8px;
     z-index: 999;
     top: 100%;
     left: 0;
